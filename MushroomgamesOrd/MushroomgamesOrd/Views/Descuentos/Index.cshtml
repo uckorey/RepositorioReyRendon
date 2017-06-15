@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MushroomgamesOrd.Descuentos>
+
+@{
+    ViewBag.Title = "Descuentos";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_Descuento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad_Descuento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Juego.nombre_Juego)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_Descuento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad_Descuento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Juego.nombre_Juego)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id_Descuento }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_Descuento }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.id_Descuento })
+        </td>
+    </tr>
+}
+
+</table>

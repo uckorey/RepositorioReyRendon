@@ -1,0 +1,58 @@
+﻿@model MushroomgamesOrd.Venta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Venta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.precioJuego_Venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioJuego_Venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_Venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_Venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descuentos.nombre_Descuento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descuentos.nombre_Descuento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Juego.nombre_Juego)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Juego.nombre_Juego)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.nombre_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.nombre_Usuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.folio_Venta }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

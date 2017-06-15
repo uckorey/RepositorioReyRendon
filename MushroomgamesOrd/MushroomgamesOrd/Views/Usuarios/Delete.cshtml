@@ -1,0 +1,104 @@
+﻿@model MushroomgamesOrd.Usuario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidoPaterno_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidoPaterno_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidoMaterno_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidoMaterno_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaNacimiento_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaNacimiento_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sexo_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexo_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correoElectronico_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correoElectronico_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.targetaCredito_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.targetaCredito_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contrasena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contrasena)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

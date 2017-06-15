@@ -1,0 +1,55 @@
+﻿@*@model IEnumerable<ues.Models.catalogocoord>*@
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+      
+       
+
+
+
+        $("#txtSearch").keyup(function () {
+            var x = $("#txtSearch").val();
+
+        
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Search", "Desarrolladoras")',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({ "Location": x }),
+                    dataType: "json",
+                    success: function (data) {
+                        var table = "<table class='table'>";
+                        $.each(data, function (IndexDesarrolladora, value) {
+                            table += "<tr><td>" + value.nombre_Desarrolladora + "</td><td>"+value.informacion_Desarrolladora+"</td><td>"+value.direccion_Desarrolladora+"</td></tr>";
+                           
+
+                        });
+                        table += "</table>";
+                        $("#myData").html(table);
+
+                     
+                    }
+                });
+        });
+    });
+</script>
+
+<table>
+    <tbody>
+        <tr>
+            <td valign="top">
+                @Html.TextBox("txtSearch", null, new { @placeholder = "Buscar Desarrolladora" })
+
+                <div id="myData">
+                  
+                </div>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>

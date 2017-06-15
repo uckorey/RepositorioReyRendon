@@ -1,0 +1,98 @@
+﻿@model MushroomgamesOrd.Usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidoPaterno_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidoPaterno_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidoMaterno_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidoMaterno_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaNacimiento_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaNacimiento_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sexo_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexo_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correoElectronico_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correoElectronico_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.targetaCredito_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.targetaCredito_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contrasena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contrasena)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Usuario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

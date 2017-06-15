@@ -1,0 +1,66 @@
+﻿@model MushroomgamesOrd.Juego
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Juego</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_Juego)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_Juego)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio_Juego)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio_Juego)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion_Juego)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion_Juego)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tamanio_Juego)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tamanio_Juego)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria.nombre_Categoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.nombre_Categoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Desarrolladora.nombre_Desarrolladora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desarrolladora.nombre_Desarrolladora)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Juego }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

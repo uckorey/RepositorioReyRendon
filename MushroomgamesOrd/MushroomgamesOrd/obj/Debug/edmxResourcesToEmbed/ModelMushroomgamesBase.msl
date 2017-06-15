@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MushroomgamesDBModelStoreContainer" CdmEntityContainer="MushroomgamesDBEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.AspNetRoles">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.AspNetUserClaims">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.AspNetUserLogins">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.AspNetUsers">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categoria">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="id_Categoria" ColumnName="id_Categoria" />
+          <ScalarProperty Name="nombre_Categoria" ColumnName="nombre_Categoria" />
+          <ScalarProperty Name="descripcion_Categoria" ColumnName="descripcion_Categoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Desarrolladora">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.Desarrolladora">
+        <MappingFragment StoreEntitySet="Desarrolladora">
+          <ScalarProperty Name="id_Desarrolladora" ColumnName="id_Desarrolladora" />
+          <ScalarProperty Name="nombre_Desarrolladora" ColumnName="nombre_Desarrolladora" />
+          <ScalarProperty Name="informacion_Desarrolladora" ColumnName="informacion_Desarrolladora" />
+          <ScalarProperty Name="direccion_Desarrolladora" ColumnName="direccion_Desarrolladora" />
+          <ScalarProperty Name="telefono_Desarrolladora" ColumnName="telefono_Desarrolladora" />
+          <ScalarProperty Name="correo_Desarrolladora" ColumnName="correo_Desarrolladora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Descuentos">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.Descuentos">
+        <MappingFragment StoreEntitySet="Descuentos">
+          <ScalarProperty Name="id_Descuento" ColumnName="id_Descuento" />
+          <ScalarProperty Name="nombre_Descuento" ColumnName="nombre_Descuento" />
+          <ScalarProperty Name="cantidad_Descuento" ColumnName="cantidad_Descuento" />
+          <ScalarProperty Name="id_Juego" ColumnName="id_Juego" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Juego">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.Juego">
+        <MappingFragment StoreEntitySet="Juego">
+          <ScalarProperty Name="id_Juego" ColumnName="id_Juego" />
+          <ScalarProperty Name="nombre_Juego" ColumnName="nombre_Juego" />
+          <ScalarProperty Name="precio_Juego" ColumnName="precio_Juego" />
+          <ScalarProperty Name="descripcion_Juego" ColumnName="descripcion_Juego" />
+          <ScalarProperty Name="tamanio_Juego" ColumnName="tamanio_Juego" />
+          <ScalarProperty Name="id_Categoria" ColumnName="id_Categoria" />
+          <ScalarProperty Name="id_Desarrolladora" ColumnName="id_Desarrolladora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="id_Usuario" ColumnName="id_Usuario" />
+          <ScalarProperty Name="nombre_Usuario" ColumnName="nombre_Usuario" />
+          <ScalarProperty Name="apellidoPaterno_Usuario" ColumnName="apellidoPaterno_Usuario" />
+          <ScalarProperty Name="apellidoMaterno_Usuario" ColumnName="apellidoMaterno_Usuario" />
+          <ScalarProperty Name="direccion_Usuario" ColumnName="direccion_Usuario" />
+          <ScalarProperty Name="telefono_Usuario" ColumnName="telefono_Usuario" />
+          <ScalarProperty Name="fechaNacimiento_Usuario" ColumnName="fechaNacimiento_Usuario" />
+          <ScalarProperty Name="sexo_Usuario" ColumnName="sexo_Usuario" />
+          <ScalarProperty Name="correoElectronico_Usuario" ColumnName="correoElectronico_Usuario" />
+          <ScalarProperty Name="targetaCredito_Usuario" ColumnName="targetaCredito_Usuario" />
+          <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Venta">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.Venta">
+        <MappingFragment StoreEntitySet="Venta">
+          <ScalarProperty Name="folio_Venta" ColumnName="folio_Venta" />
+          <ScalarProperty Name="id_Juego" ColumnName="id_Juego" />
+          <ScalarProperty Name="id_Usuario" ColumnName="id_Usuario" />
+          <ScalarProperty Name="id_Descuento" ColumnName="id_Descuento" />
+          <ScalarProperty Name="precioJuego_Venta" ColumnName="precioJuego_Venta" />
+          <ScalarProperty Name="fecha_Venta" ColumnName="fecha_Venta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="MushroomgamesDBModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Ubicacion">
+      <EntityTypeMapping TypeName="MushroomgamesDBModel.Ubicacion">
+        <MappingFragment StoreEntitySet="Ubicacion">
+          <ScalarProperty Name="nombre_ubicacion" ColumnName="nombre_ubicacion" />
+          <ScalarProperty Name="latitud" ColumnName="latitud" />
+          <ScalarProperty Name="longitud" ColumnName="longitud" />
+          <ScalarProperty Name="id_ubicacion" ColumnName="id_ubicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

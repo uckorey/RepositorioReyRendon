@@ -1,0 +1,64 @@
+﻿@model MushroomgamesOrd.Venta
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Venta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.precioJuego_Venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioJuego_Venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_Venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_Venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descuentos.nombre_Descuento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descuentos.nombre_Descuento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Juego.nombre_Juego)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Juego.nombre_Juego)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.nombre_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.nombre_Usuario)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

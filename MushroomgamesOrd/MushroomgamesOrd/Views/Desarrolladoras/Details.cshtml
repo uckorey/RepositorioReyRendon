@@ -1,0 +1,58 @@
+﻿@model MushroomgamesOrd.Desarrolladora
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Desarrolladora</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_Desarrolladora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_Desarrolladora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.informacion_Desarrolladora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.informacion_Desarrolladora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion_Desarrolladora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion_Desarrolladora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono_Desarrolladora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono_Desarrolladora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correo_Desarrolladora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correo_Desarrolladora)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Desarrolladora }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

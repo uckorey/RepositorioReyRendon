@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MushroomgamesOrd.Categoria>
+
+@{
+    ViewBag.Title = "CATEGORIAS";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear nueva", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_Categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion_Categoria)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_Categoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion_Categoria)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id_Categoria }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_Categoria }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.id_Categoria })
+        </td>
+    </tr>
+}
+
+</table>

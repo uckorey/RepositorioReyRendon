@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MushroomgamesOrd.Venta>
+
+@{
+    ViewBag.Title = "Ventas";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Registar Venta", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.precioJuego_Venta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_Venta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descuentos.nombre_Descuento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Juego.nombre_Juego)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.nombre_Usuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.precioJuego_Venta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_Venta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descuentos.nombre_Descuento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Juego.nombre_Juego)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.nombre_Usuario)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.folio_Venta }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.folio_Venta }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.folio_Venta })
+        </td>
+    </tr>
+}
+
+</table>

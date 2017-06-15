@@ -1,0 +1,87 @@
+﻿@model IEnumerable<MushroomgamesOrd.Usuario>
+
+@{
+    ViewBag.Title = "Usuarios";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Registrar nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidoPaterno_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidoMaterno_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaNacimiento_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sexo_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correoElectronico_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.targetaCredito_Usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contrasena)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidoPaterno_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidoMaterno_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaNacimiento_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sexo_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correoElectronico_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.targetaCredito_Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contrasena)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id_Usuario }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_Usuario }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.id_Usuario })
+        </td>
+    </tr>
+}
+
+</table>

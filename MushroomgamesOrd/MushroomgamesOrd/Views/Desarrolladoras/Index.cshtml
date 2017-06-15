@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MushroomgamesOrd.Desarrolladora>
+
+@{
+    ViewBag.Title = "Desarrolladoras";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear nueva", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_Desarrolladora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.informacion_Desarrolladora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion_Desarrolladora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono_Desarrolladora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correo_Desarrolladora)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_Desarrolladora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.informacion_Desarrolladora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion_Desarrolladora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono_Desarrolladora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.correo_Desarrolladora)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id_Desarrolladora }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_Desarrolladora }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.id_Desarrolladora })
+        </td>
+    </tr>
+}
+
+</table>

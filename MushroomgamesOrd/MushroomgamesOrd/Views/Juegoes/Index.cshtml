@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MushroomgamesOrd.Juego>
+
+@{
+    ViewBag.Title = "Videojuegos";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Registrar nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_Juego)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio_Juego)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion_Juego)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tamanio_Juego)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria.nombre_Categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Desarrolladora.nombre_Desarrolladora)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_Juego)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio_Juego)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion_Juego)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tamanio_Juego)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria.nombre_Categoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Desarrolladora.nombre_Desarrolladora)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id_Juego }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_Juego }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.id_Juego })
+        </td>
+    </tr>
+}
+
+</table>
